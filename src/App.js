@@ -50,7 +50,6 @@ const DateOfBirthPopup = ({ isOpen, onClose, onUserDataSubmit }) => {
           <select
             value={month}
             onChange={(e) => {
-              console.log(e.target.value);
               setMonth(e.target.value);
             }}
           >
@@ -81,9 +80,7 @@ const DateOfBirthPopup = ({ isOpen, onClose, onUserDataSubmit }) => {
 };
 
 const CountDown = ({ date, month, year, lifeYears }) => {
-  console.log(date, month, year);
   const bDay = new Date(year, month, date);
-  console.log(bDay);
   const [time, setTime] = useState(Date.now());
   useEffect(() => {
     const interval = setInterval(() => {
